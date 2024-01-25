@@ -15,9 +15,12 @@
         "source": "**",
         "destination": "/index.html"
       }
-    ]
+    ],
+    "site": "projectmanager-2e7e8",
+    "predeploy": ["npm run build"]
   },
   "storage": {
     "rules": "storage.rules"
   }
+
 }
