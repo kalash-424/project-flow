@@ -8,15 +8,20 @@ import AddIcon from '../assets/add_icon.svg'
 export default function Sidebar(){
     const { user } = useAuthContext();
 
-    const DisplayName = (str)=>{
+    const DisplayName = (str) => {
+        if (!str || typeof str !== 'string') {
+            return ''; // or any default value you want to use
+        }
+    
         let arr = str.split(" ");
         for (var i = 0; i < arr.length; i++) {
             arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
-
         }
+        
         const str2 = arr.join(" ");
         return str2;
     }
+    
 
     return(
         <div className='sidebar'>
